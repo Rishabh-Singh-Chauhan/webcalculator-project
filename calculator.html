@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <title>My Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+    <script src="calculator.js"></script>
+</head>
+
+<body>
+    <!--Create a Calculator-->
+    <div id="calculator">
+        <!--Calculator buttons-->
+        <input type="button" class="button" value="7" style="top: 342px; left: 50px;" onclick="getInput(7)">
+        <input type="button" class="button" value="8" style="top: 342px; left: 126px;" onclick="getInput(8)">
+        <input type="button" class="button" value="9" style="top: 342px; left: 202px;" onclick="getInput(9)">
+        <button class="button" style="top: 342px; left: 278px; background-color: rgba(70, 40, 120, 1); display: flex;"
+            onclick="getInput('*')">
+            <p id="multiplication_vector1">|</p>
+            <p id="multiplication_vector2">|</p>
+        </button>
+        <input type="button" class="button" value="4" style="top: 418px; left: 50px;" onclick="getInput(4)">
+        <input type="button" class="button" value="5" style="top: 418px; left: 126px;" onclick="getInput(5)">
+        <input type="button" class="button" value="6" style="top: 418px; left: 202px;" onclick="getInput(6)">
+        <button class="button" style="top: 418px; left: 278px;  background-color: rgba(70, 40, 120, 1);"
+            onclick="getInput('-')">
+            <hr style="transform: scaleX(0.5); ">
+        </button>
+        <input type="button" class="button" value="1" style="top: 494px; left: 50px;" onclick="getInput(1)">
+        <input type="button" class="button" value="2" style="top: 494px; left: 126px;" onclick="getInput(2)">
+        <input type="button" class="button" value="3" style="top: 494px; left: 202px;" onclick="getInput(3)">
+        <button class="button" style="top: 494px; left: 278px; background-color: rgba(70, 40, 120, 1); display:flex"
+            onclick="getInput('+')">
+            <p id="plus_vector1">|</p>
+            <p id="plus_vector2">|</p>
+        </button>
+        <input type="button" class="button" value="CE" style="top: 571px; left: 50px; color: rgba(70, 40, 120, 1);
+                font-weight: 500; font-size: 26px; text-shadow: 0px 0px; color: rgb(106, 62, 177)"
+            onclick="clearInput()">
+        <input type="button" class="button" value="0" style="top: 571px; left: 126px;" onclick="getInput(0)">
+        <!--equal to operator-->
+        <button class="button" style="top: 571px; left: 202px; background-color: rgba(127, 69, 226, 1)"
+            onclick="computeExpression()">
+            <hr style="transform: scaleX(0.6) translateY(4px);">
+            <hr style="transform: scaleX(0.6);">
+        </button>
+        <button class="button" style="top: 571px; left: 278px; background-color: rgba(70, 40, 120, 1);"
+            onclick="getInput('/')">
+            <p style="font-weight: bolder; transform: translateY(-8px);">.</p>
+            <hr style="margin-top: -45px; transform: scaleX(0.55);">
+            <p style="font-weight: bolder; margin-top: -36px;">.</p>
+        </button>
+        <!--Display area-->
+        <p id="expression"></p>
+        </div>
+    </div>
+</body>
+
+</html>
